@@ -1,0 +1,27 @@
+// Importação das Fontes
+@import "../components/fonts";
+@import "../components/cores";
+@import "../components/buttons";
+
+body {
+    #form-login {
+        margin-top: 120px;
+
+        font-family: $font-principal;
+
+        .form-control {
+            border: 1px solid $laranja;
+        }
+        .glyphicon {
+            padding: 24px;
+            margin-bottom: 20px;
+
+            font-size: 80px;
+
+            color: #fff;
+            border: 2px dashed #fff;
+            border-radius: 50%;
+            background-color: $laranja;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+
+@import "../components/cores";
+@import "../components/fonts";
+@import "../vendors/bootstrap/bootstrap/variables";
+@import "../vendors/bootstrap/bootstrap/mixins";
+
+#historicoPagamento{
+	@include container-fixed();
+	padding:30px;
+	margin-top:40px;
+	background-color:rgba(0,0,0,0.2);
+
+	#title{
+		color:#fff;
+		background-color: rgba(225,225,225, 0.03);
+		display: inline-block;
+		padding: 20px;
+		margin-bottom: 30px;
+		margin-left: -10px;
+		font-family: $font-menu;
+		border:1px solid rgba(225,225,225, 0.2);
+		border-radius: 10px;
+
+	}
+
+	section{
+		@include make-row();
+		
+		#valorDisponivel{
+			@include make-md-column(6);
+			background-color: $laranja;
+			color:#fff;
+			border-radius:6px;
+			max-width: 300px;
+			padding: 5px;
+			margin: 4px;
+
+			h1{
+				font-size: 20px;
+				text-align: center;
+				
+			}
+			h2{
+				text-align: center;
+			}
+
+
+		}
+
+
+		#envioPedido{
+			@include make-md-column(5);
+			@include make-md-column-offset(1);
+			margin-top: 30px;
+			
+			
+			#valorSaque{
+				@include make-md-column(8);
+
+				input{
+					height: 38px;
+					font-size: 16px;
+				}
+
+			}
+
+			#enviarPedido{
+				@include make-md-column(4);
+
+				.btn, .btn-warning{
+					height: 40px;
+					padding: 0px 30px;
+					font-size: 18px;
+					background-color: $laranja;
+					border:none;
+					.glyphicon{
+						margin-right: 4px;
+					}
+				}
+			}
+		}
+
+
+		#tabelaHistorico{
+			color: #fff;
+			margin-top:50px;
+		}
+	}
+}

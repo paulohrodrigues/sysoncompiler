@@ -1,0 +1,64 @@
+@import "components/menu";
+@import "components/cores";
+
+footer{
+	background-color: #ededed;
+	border-top: 4px solid #a05101;
+	color:#a05101;
+
+	#parceiros{
+
+	}
+
+	#redes-sociais{
+		background-color: rgba(0,0,0,.02);
+		padding: 20px;
+		ul{
+			list-style: none;
+			li{
+				padding: 5px;
+				background-color: #a05101;
+				display: inline-block;
+				border-radius: 5px;
+				a{
+					text-decoration: none;
+					color: #fff;
+				}
+			}
+		}
+
+		h3{
+			text-align: center;
+		}
+
+
+
+		.fa{
+			font-size: 20px;
+		}
+	}
+
+	#contato{
+		padding: 21px;
+		background-color: rgba(0,0,0,.05);
+		ul{
+			list-style: none;
+		}
+
+		h3{
+			text-align: center;
+		}
+	}
+
+	#copy{
+		padding-top: 55px;
+		padding-bottom: 52px;
+		background-color: rgba(0,0,0,.03);
+
+		p{
+			text-align: center;
+		}
+	}
+
+}
+

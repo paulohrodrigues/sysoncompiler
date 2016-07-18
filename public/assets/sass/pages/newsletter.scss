@@ -1,0 +1,28 @@
+@import "../components/buttons";
+@import "../components/fonts";
+
+#newsletter{
+	margin-top: 100px;
+	color:#B83F19;
+	.header {
+		background-color: none;
+		color: #b83f19;
+		height: 70px;
+		font-size: 30px;
+		padding: 10px;
+		border:none;
+		font-family: $font-secundaria;
+	}
+
+	.map {
+		min-width: 300px;
+		min-height: 300px;
+		width: 100%;
+		height: 100%;
+	}
+
+	.panel-body{
+
+			font-family: $font-menu;
+	}
+}

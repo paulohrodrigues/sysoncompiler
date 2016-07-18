@@ -1,0 +1,22 @@
+@import "../components/buttons";
+@import "../components/fonts";
+@import "../components/cores";
+
+
+
+#infoPessoais, #infoConta, #btns{
+	margin-top: 25px;
+}
+
+#infoBancarias,#infoPessoais, #infoConta{
+	h2{
+		margin:20px 0px;
+		font-family: $font-menu;
+	}
+	
+	input{
+		border: none;
+		border-radius:0px;
+		height: 40px;
+	}
+}

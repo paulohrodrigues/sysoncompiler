@@ -1,0 +1,43 @@
+@import "../vendors/bootstrap/bootstrap/variables.scss";
+@import "../vendors/bootstrap/bootstrap/mixins.scss";
+@import "../components/buttons";
+#title{
+		color:#fff;
+		background-color: rgba(225,225,225, 0.03);
+		display: inline-block;
+		padding: 20px;
+		border:1px solid rgba(225,225,225, 0.2);
+		border-radius: 10px;
+
+	}
+#calculadora{
+	@include container-fixed();
+	background-color:rgba(0,0,0,0.2);
+	margin-top:20px;
+
+	
+
+	#visor{
+		@include make-row();
+		margin-top: 40px;
+		#inputEntrada{
+			@include make-md-column(10);
+		}
+		#btnEnter{
+			@include make-md-column(2);
+
+		}
+	}
+
+	#teclado{
+		margin-top: 20px;
+
+		.row{
+			margin-bottom: 10px;
+		}
+	}
+
+	#resultados{
+		margin-bottom: 40px;
+	}
+}

@@ -1,0 +1,16 @@
+// Importação das Fontes
+@import "../components/fonts";
+@import "../components/cores";
+@import "../components/buttons";
+
+body {
+    #form-cadastro {
+        margin-top: 120px;
+
+        font-family: $font-principal;
+
+        .form-control {
+            border: 1px solid $laranja;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+/*Personalização dos botões bootsrap*/
+
+.btn{
+	border: none;
+	border-radius: 4px;
+	padding: 10px 20px;
+	border-right: 2px solid rgba(0,0,0,.4);
+	border-bottom: 2px solid rgba(0,0,0,.4);
+}
+.btn-warning{
+	background-color: #FF5722;
+	font-size: 17px;
+	.glyphicon-pencil{
+		padding: 5px;
+	}
+}
+
+
+.btn-default{
+	border-radius: 0px;
+	padding: 20px 40px;
+	font-size: 20px;
+	font-weight: bold;
+	border: 2px dashed #FF7247;
+	color: #fff;
+	background:rgba(255,255,255,0.2);
+
+	&:hover{
+		border: 2px dashed #fff; 
+		background: #FF5722;
+		color: #fff;	
+	}
+}

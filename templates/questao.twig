@@ -1,0 +1,96 @@
+{% extends "layout.twig" %}
+
+{% block conteudo %}
+
+<div class="container-fluid">
+	{% if acertou == 'ok' %}
+	<div class="alert alert-success">
+  		<strong>Certo!</strong> Questão resolvida com exito.
+	</div>
+	
+	{% elseif acertou =='no' %}
+
+	<div class="alert alert-danger">
+  		<strong>Erro!</strong> Ops, seu codigo esta retornando algum tipo de erro, por favor reveja e tente novamente.
+	</div>
+
+	{% endif %}
+	
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<h2>
+					{{dadosquestao[0].titulo}}
+				</h2>
+				<p style="text-align:justify; letter-spacing: 0px;">
+					{{dadosquestao[0].descricao}}
+				</p>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<h2>
+					Entrada:
+				</h2>
+				<p style="text-align:justify; letter-spacing: 0px;">
+					{{dadosquestao[0].descricao_entrada}}
+				</p>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<h2>
+					Saida:
+				</h2>
+				<p style="text-align:justify; letter-spacing: 0px;">
+					{{dadosquestao[0].descricao_saida}}
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<h4>
+				Codigo: Cole seu codigo Python aqui
+			</h4>
+			<p style="text-align:justify; letter-spacing: 1px;">
+				<form action="{{path_for("questaoPost")}}/{{dadosquestao[0].id}}" method="post" accept-charset="utf-8" style="width: 100px;">
+					<input type="hidden" name="id" value="{{ dadosquestao[0].id }}">
+					
+					{{htmlHidden.html | raw}}
+					
+					<textarea name="codigo" style="width: 400%; height: 300px;"></textarea>	
+					</br>
+					<input type="submit" value="Submeter">
+				</form>
+
+				
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h4>
+				Exemplo de entrada:
+			</h4>
+			<p style="text-align:justify; letter-spacing: 1px;">
+				{{dadosquestao[0].entrada | raw }}
+			</p>
+			
+		</div>
+		<div class="col-md-4">
+			<h4>
+				Exemplo de saida:
+			</h4>
+			<p style="text-align:justify; letter-spacing: 1px;">
+				{{dadosquestao[0].saida | raw }}
+			</p>
+		</div>
+	</div>
+</div>
+
+</br>
+</br>
+</br>
+
+{% endblock %}
+

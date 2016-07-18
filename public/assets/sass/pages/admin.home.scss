@@ -1,0 +1,30 @@
+@import "../components/cores";
+@import "../components/fonts";
+@import "vendors/bootstrap/bootstrap/variables";
+@import "vendors/bootstrap/bootstrap/mixins";
+#box1{
+	
+
+	h1{
+		color: #fff;
+		display: inline-block;
+		padding: 4px 30px;
+		margin: 10px 0px;
+		font-size:28px;
+		background-color: $menu;
+		border-radius:6px 6px 0px 0px;
+		font-family: $font-menu;
+		
+
+	}
+	
+	section{
+		@include make-row();
+	}
+
+	#ganhos,#vendas,#publicacoes,#relatorios,#painel,#atividades{
+		@include make-md-column(6);
+	}
+
+	
+}

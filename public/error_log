@@ -1,0 +1,5 @@
+[04-Apr-2016 18:53:50 America/Chicago] PHP Warning:  require(/home/remad073/public_html/thr3ap.com/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home/remad073/public_html/thr3ap.com/public/index.php on line 11
+[04-Apr-2016 18:53:50 America/Chicago] PHP Warning:  require(/home/remad073/public_html/thr3ap.com/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home/remad073/public_html/thr3ap.com/public/index.php on line 11
+[04-Apr-2016 18:53:50 America/Chicago] PHP Fatal error:  require(): Failed opening required '/home/remad073/public_html/thr3ap.com/public/../vendor/autoload.php' (include_path='.:/opt/php55/lib/php') in /home/remad073/public_html/thr3ap.com/public/index.php on line 11
+[04-Apr-2016 19:03:10 America/Chicago] PHP Fatal error:  Interface 'Slim\Interfaces\Http\EnvironmentInterface' not found in /home/remad073/public_html/thr3ap.com/vendor/slim/slim/Slim/Http/Environment.php on line 22
+[04-Apr-2016 19:20:51 America/Chicago] PHP Fatal error:  Class 'classes\Session' not found in /home/remad073/public_html/thr3ap.com/src/routesFrontEnd.php on line 205

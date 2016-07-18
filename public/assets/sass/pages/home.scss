@@ -1,0 +1,201 @@
+// Importação das Fontes
+@import "../components/fonts";
+@import "../components/buttons";
+@import "../components/cores";
+
+
+* {
+    font-family: $font-principal;
+}
+
+
+
+
+/*Slide Principal*/
+#principal{
+    margin-top: 50px;
+    .pslider {
+        position: relative;
+
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+
+        list-style: none;
+
+        img {
+            display: block;
+            float: left;
+            width: 100%;
+            height: auto;
+
+            border: 0;
+        }
+
+        li {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: none;
+            width: 100%;
+
+            -webkit-backface-visibility: hidden;
+
+            &:first-child {
+                position: relative;
+
+                display: block;
+                float: left;
+            }
+        }
+    }
+    
+}
+
+
+
+// Estilo box1
+
+#box1 {
+    padding: 50px 0px;
+    background-color: #eee;
+    h1{text-align:center; color:#333; }
+    p{
+        font-style: italic;
+        font-size:18px; 
+        max-width:355px; 
+        margin: 0 auto; 
+        text-align:justify; 
+        line-height:50px; 
+        color:#333;
+    }
+}
+
+// Estilo box2
+#box2 {
+    padding: 80px 0;
+    margin-top: 0px;
+
+    background: url(../../imgs/bg-section-3.jpg) no-repeat;
+    background-size: cover;
+
+    #box2-left {
+        padding: 40px;
+
+        color: #fff;
+        background-color: rgba(0,0,0,.4);
+
+        h1 {
+            font-family: $font-secundaria;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 40px;
+        }
+    }
+}
+
+
+// Estilo box3
+#box3 {
+    padding: 40px 0;
+    margin-top: 50px;
+
+    h2 {
+
+        font-size: 40px;
+    }
+}
+
+
+
+// Estilo box4
+
+#box4 {
+    padding: 40px 0;
+
+    background-color: #ff5722;
+
+    #box4-container {
+        padding: 30px;
+
+        border: 2px dashed #fff;
+        border-radius: 10px;
+    }
+
+    #box4-title {
+        margin-bottom: 70px;
+
+        font-size: 50px;
+
+        text-align: center;
+
+        color: #fff;
+    }
+
+
+    #box4-porcentagens {
+        h2 {
+            text-align: center;
+
+            color: #fff;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+    }
+}
+
+
+
+// Estilo box5
+
+#box5 {
+    .container {
+        margin-top: 50px;
+
+    }
+
+    #box5-left {
+        margin-top: 80px;
+    }
+    #box5-right {
+        margin-top: 150px;
+        p {
+            font-size: 16px;
+
+            text-align: justify;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+    }
+}
+
+
+    // Estilo box6
+    #box6{
+       background: url(../../imgs/bg-box6.jpg) no-repeat;
+       padding: 100px 0px;
+       background-size: cover;
+       color: #222;
+
+       span{
+        color: $laranja;
+        font-size: 6em;
+       }
+       h1{
+        color: #333;
+       }
+       h2{
+        font-size: 30px;
+       }
+       h3{
+        color: #555;
+       }
+   }

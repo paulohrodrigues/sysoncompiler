@@ -1,0 +1,140 @@
+{% block head %}
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Login</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/assets/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	</head>
+{% endblock %}
+
+
+
+
+
+{% block body %}
+	<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Faça seu login >><a href="{{path_for('home')}}">Home</a></h3>
+                    </div>
+                    <div class="panel-body">
+                    
+
+                        <form role="form" method="post" action="{{path_for("login")}}">
+                            <fieldset>
+                                        
+                                {% if erros.loginValidacao %}
+                                   <div class="alert alert-danger">
+                                        <strong>{{erros.loginValidacao | first}}</strong>
+                                    </div>
+                                {% endif %}
+
+                                <div class="form-group {{erros.email ? 'has-error' : ''}}">
+                                    <input class="form-control" placeholder="Email" name="email" value="{{recarregaDados.email}}" type="email" required autofocus>
+                                    {% if erros.email %}
+                                        <span class="help-block">{{erros.email | first}}</span>
+                                    {% endif %}
+                                </div>
+
+                                <div class="form-group {{erros.senha ? 'has-error' : ''}}">
+                                    <input class="form-control" placeholder="Senha" name="senha" type="password" required value="">
+                                    {% if erros.senha %}
+                                        <span class="help-block">{{erros.senha | first}}</span>
+                                    {% endif %}
+                                </div>
+                                <button type="submit" class="btn btn-lg btn-success btn-block">Login</button>
+                            </fieldset>
+                                <!-- autenticação -->
+                                {{htmlHidden.html | raw}}
+                        </form>
+                       		<center>
+                       			<a href="#" data-toggle="modal" data-target="#myModal">Cadastre-se</a>
+                       		</center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Modal de cadastro -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Faça seu cadastro</h4>
+      </div>
+	      <div class="modal-body">
+	      	<form action="{{path_for('cadastro')}}" method="post" accept-charset="utf-8">
+	      		<div class="form-group {{erros.emailC ? 'has-error' : ''}}" >
+                 	<input class="form-control" placeholder="Email" name="emailC" value="{{recarregaDados.emailC}}" type="email" required autofocus>
+                    {% if erros.emailC %}
+                        <span class="help-block">{{erros.emailC | first}}</span>
+                    {% endif %}
+                </div>
+                <div class="form-group {{erros.nomeC ? 'has-error' : ''}}">
+                 	<input class="form-control" placeholder="Nome" name="nomeC" value="{{recarregaDados.nomeC}}" type="text" required autofocus>
+                    {% if erros.nomeC %}
+                        <span class="help-block">{{erros.nomeC | first}}</span>
+                    {% endif %}
+                </div>
+                <div class="form-group {{erros.senhaC ? 'has-error' : ''}}">
+                    <input class="form-control" placeholder="Senha" name="senhaC" type="password" required value="">
+                    {% if erros.senhaC %}
+                        <span class="help-block">{{erros.senhaC | first}}</span>
+                    {% endif %}
+                </div>
+                <div class="form-group {{erros.senhaIIC ? 'has-error' : ''}}">
+                    <input class="form-control" placeholder="Repetir senha" name="senhaIIC" type="password" required value="">
+                    {% if erros.senhaIIC %}
+                        <span class="help-block">{{erros.senhaIIC | first}}</span>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn btn-lg btn-success btn-block">Cadastrar</button>
+                {{htmlHidden.html | raw}}
+	      	</form>
+	      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    
+    <!-- jQuery -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/assets/js/metisMenu.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="/assets/js/sb-admin-2.js"></script>
+
+
+    {% if erroC == 'cad' %}
+        <script>
+            $("#myModal").modal();
+        </script>
+    {% endif %}
+
+
+	</body>
+{% endblock %}
