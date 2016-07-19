@@ -22,7 +22,6 @@ class ValidaOAlgoritmoPythonController
 			}else{
 				return "no";
 			}
-			sleep(2);
 		}
 		
 		return "ok";

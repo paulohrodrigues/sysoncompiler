@@ -22,7 +22,12 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="{{path_for('home')}}">Home</a></li>
       <li><a href="{{path_for('questoes')}}">Questões</a></li>
-      <li><a href="#">Rankings</a></li> 
+      <li><a href="#">Rankings</a></li>
+      
+      {% if dadosPessoais.email == "paulo100games@gmail.com" %} 
+        <li><a href="{{path_for('cadastra.questao.view')}}">Cadastrar Questões</a></li>
+      {% endif %}
+    
     </ul>
     
     {% if not dadosPessoais.nome %}

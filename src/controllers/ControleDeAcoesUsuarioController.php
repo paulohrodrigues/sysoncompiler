@@ -31,7 +31,6 @@ class ControleDeAcoesUsuarioController
 			$status->id_usuario=$_SESSION["id"];
 			$status->id_questao=$this->id;
 			$id=DB::store($status);
-			DB::close();
 			return true;
 		}
 		return false;
