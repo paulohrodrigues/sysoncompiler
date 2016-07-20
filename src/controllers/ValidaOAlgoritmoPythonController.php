@@ -18,10 +18,16 @@ class ValidaOAlgoritmoPythonController
 				array_push($arrayEntrada,$valueEntrada->valor);
 			}
 			$submete=new Submete($_POST["codigo"],$arrayEntrada);
-			if(trim($submete::getRetorno())==trim($buscaSaida->valor)){
+			
+			$string1= utf8_encode(trim($submete::getRetorno()));
+			$string2= utf8_encode(trim($buscaSaida->valor));
+
+			if(strcmp(str_replace("\n","</br>",$string1),$string2)==0){
+				
 			}else{
 				return "no";
-			}
+			}	
+
 		}
 		
 		return "ok";

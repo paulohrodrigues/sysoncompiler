@@ -8,7 +8,9 @@ class Submete
 
 	static private function edicaoDeCodigo($codigo){
 		$codeEdit1="import sys\nnSysOnCompile=-1\ndef incremetSysOnCompile():\n\tglobal nSysOnCompile \n\tnSysOnCompile+=1 \n\treturn nSysOnCompile\n".$codigo;
-		$codeEdit2=str_replace("input()","sys.argv[1::][incremetSysOnCompile()]",$codeEdit1);
+		$codeEdit2=str_replace("raw_input()","sys.argv[1::][incremetSysOnCompile()]",$codeEdit1);
+		$codeEdit2=str_replace("input()","sys.argv[1::][incremetSysOnCompile()]",$codeEdit2);
+
 		self::$codigo=$codigo;		
 
 		return $codeEdit2;

@@ -76,7 +76,7 @@ class QuestoesController
 				$idList=DB::store($cad);
 
 				$cadSaida=DB::dispense('saida');
-					$cadSaida->id_listaentradasaida =$idList;
+					$cadSaida->id_listadeentradasaida =$idList;
 					$cadSaida->valor 				=$saida[$i];
 					$i++;
 
@@ -85,9 +85,9 @@ class QuestoesController
 				foreach (explode(",",$value) as $value2) {
 					
 					$cadEntrada=DB::dispense('entrada');
-						$cadEntrada->id_listaentradasaida =$idList;
+						$cadEntrada->id_listadeentradasaida =$idList;
 						$cadEntrada->valor 				  =$value2;
-					$idList=DB::store($cadEntrada);
+					$idEntrada=DB::store($cadEntrada);
 
 				}
 
